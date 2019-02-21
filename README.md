@@ -6,7 +6,7 @@ Aligned text generator.
 
 ## Description
 
-Tabify allows to quickly convert comma delimited text into monospaced aligned text.
+Tabify allows to quickly convert comma delimited text into aligned monospaced text.
 
 ## Version
 

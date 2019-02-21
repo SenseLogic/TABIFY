@@ -1,0 +1,106 @@
+<meta charset="utf-8">
+<table>
+    <tbody>
+        <tr>
+            <td>
+                <textarea id="SourceText" style="width:48vw;height:94vh"></textarea>
+            </td>
+            <td>
+                <textarea id="TargetText" style="width:48vw;height:94vh"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button onclick="Tabify()">Tabify</button>
+                <input id="OldSeparator" type="text" placeholder="Separator"\>
+            </td>
+            <td>
+                <input id="NewSeparator" type="text" placeholder="Separator"\>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<script>
+    function Tabify()
+    {
+        var
+            column,
+            column_array,
+            column_index,
+            column_length_array,
+            line,
+            line_array,
+            line_index,
+            new_separator,
+            old_separator,
+            source_text,
+            target_text;
+
+        source_text = document.getElementById( "SourceText" ).value;
+        old_separator = document.getElementById( "OldSeparator" ).value;
+        new_separator = document.getElementById( "NewSeparator" ).value;
+
+        if ( old_separator == "" )
+        {
+            old_separator = "\t";
+        }
+
+        if ( new_separator == "" )
+        {
+            new_separator = "    ";
+        }
+
+        line_array = source_text.split( "\n" );
+        column_length_array = [];
+
+        for ( line_index = 0;
+              line_index < line_array.length;
+              ++line_index )
+        {
+            line = line_array[ line_index ];
+
+            column_array = line.split( old_separator );
+
+            for ( column_index = 0;
+                  column_index < column_array.length;
+                  ++column_index )
+            {
+                column = column_array[ column_index ].trim();
+
+                if ( column_index >= column_length_array.length
+                     || column.length > column_length_array[ column_index ] )
+                {
+                    column_length_array[ column_index ] = column.length;
+                }
+            }
+        }
+
+        for ( line_index = 0;
+              line_index < line_array.length;
+              ++line_index )
+        {
+            line = line_array[ line_index ];
+            column_array = line.split( old_separator );
+
+            for ( column_index = 0;
+                  column_index < column_array.length;
+                  ++column_index )
+            {
+                column = column_array[ column_index ].trim();
+
+                while ( column.length < column_length_array[ column_index ] )
+                {
+                    column = column + " ";
+                }
+
+                column_array[ column_index ] = column;
+            }
+
+            line_array[ line_index ] = column_array.join( new_separator ).trim();
+        }
+
+        target_text = line_array.join( "\n" );
+
+        document.getElementById( "TargetText" ).value = target_text;
+    }
+</script>

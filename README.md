@@ -6,7 +6,25 @@ Aligned text generator.
 
 ## Description
 
-Tabify converts comma-separated values into indented text.
+Tabify quickly converts comma-separated values into column-aligned text.
+
+## Sample input
+
+```
+Year,Make,Model
+1997,Ford,E350
+2000,Mercury,Cougar
+
+, => |
+```
+
+## Sample output
+
+```
+Year | Make    | Model
+1997 | Ford    | E350
+2000 | Mercury | Cougar
+```
 
 ## Version
 

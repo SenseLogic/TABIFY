@@ -2,11 +2,11 @@
 
 # Tabify
 
-Aligned text generator.
+Comma-delimited list prettifier.
 
 ## Description
 
-Tabify quickly converts comma-separated values into column-aligned text.
+Tabify converts comma-delimited lists into readable text.
 
 ## Sample input
 

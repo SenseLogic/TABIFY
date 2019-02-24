@@ -6,7 +6,7 @@ Delimited list prettifier.
 
 ## Description
 
-Tabify converts delimited lists into readable texts.
+Tabify interactively converts delimited lists into readable texts.
 
 ## Sample input
 

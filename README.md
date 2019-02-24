@@ -2,7 +2,7 @@
 
 # Tabify
 
-Delimited list prettifier.
+List prettifier.
 
 ## Description
 

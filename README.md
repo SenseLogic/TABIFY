@@ -14,7 +14,8 @@ Tabify interactively converts delimited lists into readable texts.
 Year,Make,Model
 1997,Ford,E350
 2000,Mercury,Cougar
-
+```
+```
 , => |
 ```
 Result:

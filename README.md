@@ -2,11 +2,11 @@
 
 # Tabify
 
-Comma-delimited list prettifier.
+Delimited list prettifier.
 
 ## Description
 
-Tabify converts comma-delimited lists into readable text.
+Tabify converts delimited lists into readable texts.
 
 ## Sample input
 

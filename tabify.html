@@ -1,21 +1,28 @@
 <meta charset="utf-8">
+<style>
+    *
+    {
+        padding : 0;
+        margin : 0;
+    }
+</style>
 <table>
     <tbody>
         <tr>
             <td>
-                <textarea id="SourceText" style="width:48vw;height:94vh"></textarea>
+                <textarea id="SourceText" style="width:49vw;height:90vh"></textarea>
             </td>
             <td>
-                <textarea id="TargetText" style="width:48vw;height:94vh"></textarea>
+                <textarea id="TargetText" style="width:49vw;height:90vh"></textarea>
             </td>
         </tr>
         <tr>
             <td>
-                <button onclick="Tabify()">Tabify</button>
-                <input id="OldSeparator" type="text" placeholder="Separator"\>
+                <button onclick="Tabify()" style="font-size:2vh">Tabify</button>
+                <input id="OldSeparator" type="text" placeholder="Separator" style="width:30vw;font-size:2vh"\>
             </td>
             <td>
-                <input id="NewSeparator" type="text" placeholder="Separator"\>
+                <input id="NewSeparator" type="text" placeholder="Separator" style="width:30vw;font-size:2vh"\>
             </td>
         </tr>
     </tbody>

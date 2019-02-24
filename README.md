@@ -8,7 +8,7 @@ Delimited list prettifier.
 
 Tabify interactively converts delimited lists into readable texts.
 
-## Sample input
+## Sample
 
 ```
 Year,Make,Model
@@ -17,9 +17,7 @@ Year,Make,Model
 
 , => |
 ```
-
-## Sample output
-
+Result:
 ```
 Year | Make    | Model
 1997 | Ford    | E350
